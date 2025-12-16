@@ -24,8 +24,6 @@ Run the script via a PowerShell terminal.
 
 powershell -ExecutionPolicy Bypass -File jamChangeResolution.ps1 [Parameters]
 
-text
-
 ### Parameters
 
 | Parameter    | Type   | Default | Description                                                                 |
@@ -45,32 +43,22 @@ text
 Set resolution to 1920x1080 at 144Hz, ensure HDR is OFF, and set scaling to 100% (no zoom).
 .\jamChangeResolution.ps1 -Width 1920 -Height 1080 -Frequency 144 -HDR Off -Scale 100
 
-text
-
 ### 2. 4K HDR Media Mode
 Set resolution to 4K (3840x2160) at 60Hz, turn HDR ON, and increase text size to 150%.
 .\jamChangeResolution.ps1 -Width 3840 -Height 2160 -Frequency 60 -HDR On -Scale 150
 
-text
-
 ### 3. High-Res Productivity (No HDR)
 Set an ultrawide resolution with a slight scale increase for readability.
 .\jamChangeResolution.ps1 -Width 3440 -Height 1440 -Frequency 100 -HDR Off -Scale 125
-
-text
 
 ### 4. Just Toggle HDR (Keep Resolution)
 If you only want to force HDR On (parameters default to 1920x1080, so be careful if that's not your native res).
 *Tip: It is best to always specify your target resolution.*
 .\jamChangeResolution.ps1 -HDR On
 
-text
-
 ### 5. Fix "Stuck" Resolution
 If Windows constantly reverts your resolution when toggling HDR, increase the wait time to allow the driver to settle.
 .\jamChangeResolution.ps1 -Width 2560 -Height 1440 -HDR On -WaitTime 500
-
-text
 
 ---
 
